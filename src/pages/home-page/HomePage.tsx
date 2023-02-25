@@ -34,10 +34,10 @@ const HomePage = () => {
 
         <Row justify={'center'}>
           <Col span={12}>
-            <Title level={2} style={{ fontSize: '28px' }}>You will be presented with 10 True or False questions.</Title>
+            <Title className="title-responsive" level={2} >You will be presented with 10 True or False questions.</Title>
           </Col>
           <Col span={24}>
-            <Title level={2} style={{ fontSize: '28px' }}>Can you score 100%</Title>
+            <Title className="title-responsive" level={2} >Can you score 100%</Title>
           </Col>
         </Row>
 

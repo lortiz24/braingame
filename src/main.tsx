@@ -8,11 +8,9 @@ import { BrainGameProvider } from './context/BrainGameProvider';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <MainLayout > */}
       <BrainGameProvider>
         <AppRouter />
       </BrainGameProvider>
-      {/* </MainLayout> */}
     </BrowserRouter>
   </React.StrictMode>,
 )

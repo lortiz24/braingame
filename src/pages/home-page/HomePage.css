@@ -14,9 +14,22 @@
   box-sizing: border-box;
   border-radius: 20px;
   text-align: center;
-  
 }
-
+.title-responsive {
+  font-size: 28px !important;
+}
+@media (max-width: 768px) {
+  .card-home-page {
+    width: 90%;
+  }
+  .title-responsive {
+    font-size: 20px !important;
+  }
+  .title-part.line-1 {
+    margin: 0;
+    font-size: 8vw !important;
+  }
+}
 .title .title-part {
   font-weight: 1000;
   font-family: "Nunito", sans-serif;
@@ -47,13 +60,12 @@
 }
 
 .pulse-button {
-  
   display: block;
   width: 100px;
   height: 100px;
   font-size: 1.3em;
   font-weight: light;
-  font-family:"Nunito", sans-serif;
+  font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   text-align: center;
   line-height: 100px;
