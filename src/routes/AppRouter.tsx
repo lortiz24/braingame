@@ -20,9 +20,11 @@ export const AppRouter = () => {
         <>
             <Routes>
                 <Route path='/' element={<MainLayout > <Outlet /> </MainLayout>}>
+                    <Route path="/" element={<Navigate to='/home' />} />
                     <Route path="/home" element={<HomePage />} />
                     <Route path="/question" element={questions.length > 0 ? <QuestionsPage /> : <Navigate to='/home' />} />
                     <Route path="/results" element={questions.length > 0 ? <ResultPage /> : <Navigate to='/home' />} />
+                    <Route path="/*" element={<Navigate to='/home' />} />
                 </Route>
             </Routes>
         </>
