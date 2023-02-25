@@ -1,0 +1,16 @@
+body{
+  margin: 0 ;
+}
+
+.main-layaout {
+  height: 100vh;
+  background-color: aqua;
+}
+.main-layout-header {
+  text-align: center;
+  color: #fff;
+  height: 64;
+  padding-inline: 50;
+  line-height: 64px;
+  background-color: "#7dbcea";
+}
