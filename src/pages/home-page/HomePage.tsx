@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Button, Card, Col, Row, Space, Typography } from 'antd'
 import { Link, useNavigate } from 'react-router-dom';
 import { BrainGameContex } from '../../context/BrainGameContex';
@@ -11,19 +11,19 @@ const { Title, Paragraph } = Typography;
 const HomePage = () => {
 
   const navigate = useNavigate()
-  const { setCurrentQuestion, setQuestions } = useContext(BrainGameContex);
+  const { setCurrentQuestion, setQuestions, currentQuestion } = useContext(BrainGameContex);
   const { isLoading, questions, execute } = useFetchQuestions();
 
 
-  const handleBeginClick = () => {
-    execute()
-  }
-
   useEffect(() => {
-    setCurrentQuestion(0)
-    setQuestions(questions)
-    navigate('/question')
-  }, [questions])
+    if (questions.length > 0) {
+      setCurrentQuestion(0)
+      setQuestions(questions)
+      navigate('/question')
+    }
+  }, [isLoading])
+
+
 
   return (
     <div className='container'>
@@ -43,7 +43,7 @@ const HomePage = () => {
 
         <Row justify={'center'}>
           <Col span={12} style={{ display: "flex", justifyContent: 'center', alignContent: "center" }}>
-            <span className='pulse-button' onClick={handleBeginClick}>Begin</span>
+            <span className='pulse-button' onClick={execute}>Begin</span>
           </Col>
         </Row>
 

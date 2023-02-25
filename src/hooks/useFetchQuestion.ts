@@ -9,6 +9,7 @@ export const useFetchQuestions = () => {
         const data = await questionsModels.getQuestions();
         setQuestions(data);
         setIsLoading(false);
+        return { isLoading, questions, execute }
     };
    
 
