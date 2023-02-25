@@ -17,19 +17,14 @@ const QuestionCard = () => {
                         <Paragraph >{<Title level={2} style={{ color: '#FFD700', fontSize: '28px' }}>{questions[currentQuestion].question}</Title>}</Paragraph>
                     </Col>
                 </Row>
-                <Row justify={'center'}>
-                    <Col span={12}>
+                <Row justify={'space-around'}>
+                    <Col span={12} style={{display:"flex",justifyContent:"space-around"}}>
                         <Button>
                             TRUE
                         </Button>
                         <Button>
                             FALSE
                         </Button>
-                    </Col>
-                </Row>
-                <Row justify={'center'}>
-                    <Col span={12}>
-
                     </Col>
                 </Row>
             </Col>

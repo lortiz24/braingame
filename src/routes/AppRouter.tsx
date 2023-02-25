@@ -3,6 +3,7 @@ import {
     Routes,
     Route,
     useNavigate,
+    Outlet,
 } from "react-router-dom";
 import { BrainGameContex } from '../context/BrainGameContex';
 import MainLayout from '../layouts/MainLayout';
@@ -18,8 +19,10 @@ export const AppRouter = () => {
     return (
         <>
             <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/question" element={questions.length > 0 ? <QuestionsPage /> : <HomePage />} />
+                <Route path='/' element={<MainLayout > <Outlet /> </MainLayout>}>
+                    <Route path="/home" element={<HomePage />} />
+                    <Route path="/question" element={questions.length > 0 ? <QuestionsPage /> : <HomePage />} />
+                </Route>
             </Routes>
         </>
     )

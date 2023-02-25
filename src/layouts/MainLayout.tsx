@@ -30,11 +30,9 @@ const footerStyle: React.CSSProperties = {
 const MainLayout: React.FC<HomePageProps> = ({ children }) => {
     return (
         <>
-            <div className='main-layaout'>
-                <Header className='main-layout-header' style={headerStyle}>Header</Header>
-                <Content className='main-layout-content' style={contentStyle}>{children}</Content>
-                <Footer className='main-layout-footer' style={footerStyle}>Footer</Footer>
-            </div>
+            <Layout >
+                <Content>{children}</Content>
+            </Layout>
         </>
     )
 }

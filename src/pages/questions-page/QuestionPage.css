@@ -1,19 +1,15 @@
 .container {
-  display: flex; /* establecer el contenedor en modo flex */
-  align-items: center; /* centrar verticalmente los elementos */
-  justify-content: center; /* centrar horizontalmente los elementos */
-  height: 100vh; /* altura del contenedor al 100% de la ventana */
-  background: rgb(144, 85, 103);
-  background: linear-gradient(
-    90deg,
-    rgba(144, 85, 103, 1) 0%,
-    rgba(116, 4, 133, 1) 100%
-  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #4a2775;
+  
 }
 .card-home-page {
-  background-color: rgba(255, 255, 255, 0.87);
-  width: 60%;
-  height: 80%;
+  background-color: rgb(245,245,245);
+  min-width: 50px;
+  min-height: 60%;
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
@@ -48,4 +44,7 @@
   width: 100%;
   overflow: hidden;
   line-height: 0;
+}
+
+.custom-button {
 }

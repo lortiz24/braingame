@@ -19,15 +19,15 @@ const QuestionsPage = () => {
     }
     return (
         <div className='container'>
-            <Card className='card-home-page' title={<Title level={2} style={{ color: '#E384FF', fontSize: '38px' }}>{questions[currentQuestion].category}</Title>}>
+            <Card
+                title={<Title level={2} style={{ color: '#E384FF', fontSize: '38px' }}>{questions[currentQuestion].category}</Title>}
+                actions={[<Button shape="round" type='primary' size='large' onClick={() => { getNextQuestion() }} >GO!</Button>]}
+            >
 
                 <Row style={{ height: "100%" }} >
                     <QuestionCard />
                 </Row>
-                <Row>
-                    {/* <Button shape='circle' onClick={() => { getPreviusQuestion() }} >Previus</Button> */}
-                    <Button shape="round" type='primary' size='large' onClick={() => { getNextQuestion() }} >GO!</Button>
-                </Row>
+
 
             </Card>
         </div>
