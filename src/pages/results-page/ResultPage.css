@@ -12,3 +12,10 @@
   color: #4A2775 !important;
   border-color: #4A2775 !important;
 }
+
+
+@media (max-width: 768px) {
+  .card-result-page {
+    width: 90%;
+  }
+}

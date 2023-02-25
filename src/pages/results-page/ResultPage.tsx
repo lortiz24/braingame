@@ -25,6 +25,7 @@ const ResultPage = () => {
     return (
         <div className='container'>
             <Card
+                style={{overflow: 'auto'}}
                 className='card-result-page'
                 title={
                     <Title>

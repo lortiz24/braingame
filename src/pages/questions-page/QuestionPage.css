@@ -4,23 +4,24 @@
   justify-content: center;
   height: 100vh;
   background-color: #4a2775;
-  
-}
-.card-home-page {
-  background-color: rgb(245,245,245);
-  min-width: 50px;
-  min-height: 60%;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 20px;
 }
 
-.image-vertical {
-  background-image: url("../../assets/BrameTime.jpg");
-  object-fit: cover;
-  background-size: contain;
-  background-repeat: no-repeat;
+.card-question-page {
+  background-color: rgb(245, 245, 245, 0.9);
+  color: #e384ff;
+}
+.title-responsive {
+  font-size: 28px !important;
+  color: #e384ff;
+}
+@media (max-width: 768px) {
+  .card-question-page {
+    width: 90%;
+  }
+  .title-responsive {
+    font-size: 20px !important;
+    color: #e384ff;
+  }
 }
 
 .go-button {

@@ -35,10 +35,13 @@ const QuestionCard = () => {
 
                 <Row justify={'center'}>
                     <Col span={12}>
-                        <Title level={2} style={{ color: '#4A2775', fontSize: '28px' }}><EncodeUtils text={questions[currentQuestion].question} /></Title>
+                        <Title
+                            className='title-responsive'
+                            level={2}
+                            style={{ color: '#4A2775', fontSize: '28px' }}><EncodeUtils text={questions[currentQuestion].question} /></Title>
                     </Col>
                 </Row>
-                <Row justify={'space-around'} style={{marginTop:30}}>
+                <Row justify={'center'} style={{ marginTop: 30, width: '100%' }}>
                     <Col span={12} style={{ display: "flex", justifyContent: "space-around" }}>
                         <Button
                             onClick={() => handledAnswer('True')}

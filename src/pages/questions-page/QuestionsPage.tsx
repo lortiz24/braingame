@@ -5,7 +5,7 @@ import './QuestionPage.css'
 import QuestionCard from './QuestionCard';
 import { useNavigate } from 'react-router-dom';
 
-const { Title, Paragraph } = Typography;
+const { Title } = Typography;
 
 
 const QuestionsPage = () => {
@@ -18,9 +18,11 @@ const QuestionsPage = () => {
     return (
         <div className='container'>
             <Card
+                className='card-question-page'
                 title={
                     <Title
-                        level={2} style={{ color: '#E384FF', fontSize: '38px' }}>{questions[currentQuestion].category}
+                        className='title-responsive'
+                        level={2} style={{ color: '#E384FF' }}>{questions[currentQuestion].category}
                     </Title>}
             >
 
