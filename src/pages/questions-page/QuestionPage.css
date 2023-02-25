@@ -1,0 +1,29 @@
+.container {
+    display: flex; /* establecer el contenedor en modo flex */
+    align-items: center; /* centrar verticalmente los elementos */
+    justify-content: center; /* centrar horizontalmente los elementos */
+    height: 100vh; /* altura del contenedor al 100% de la ventana */
+    background: rgb(144, 85, 103);
+    background: linear-gradient(
+      90deg,
+      rgba(144, 85, 103, 1) 0%,
+      rgba(116, 4, 133, 1) 100%
+    );
+  }
+  .card-home-page {
+    background-color: white;
+    width: 60%;
+    height: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  .image-vertical{
+    background-image: url('../../assets/BrameTime.jpg');
+    object-fit: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  

@@ -3,7 +3,12 @@
   align-items: center; /* centrar verticalmente los elementos */
   justify-content: center; /* centrar horizontalmente los elementos */
   height: 100vh; /* altura del contenedor al 100% de la ventana */
-  background-color: rgb(227,232,236);
+  background: rgb(144, 85, 103);
+  background: linear-gradient(
+    90deg,
+    rgba(144, 85, 103, 1) 0%,
+    rgba(116, 4, 133, 1) 100%
+  );
 }
 .card-home-page {
   background-color: white;

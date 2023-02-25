@@ -1,17 +1,28 @@
+import React, { useContext, useEffect } from 'react'
 import { Button, Col, Row, Space, Typography } from 'antd'
-import React, { useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import { BrainGameContex } from '../../context/BrainGameContex';
 import { useFetchQuestions } from '../../hooks/useFetchQuestions';
 import './HomePage.css'
 
-const { Text, Title, Paragraph } = Typography;
+const { Title, Paragraph } = Typography;
+
 
 const HomePage = () => {
-  const { score } = useContext(BrainGameContex);
-  const { isLoading, questions } = useFetchQuestions()
+  
+  const navigate = useNavigate()
+  const { setCurrentQuestion, setQuestions } = useContext(BrainGameContex);
+  const { isLoading, questions } = useFetchQuestions();
+
+
+  useEffect(() => {
+    setCurrentQuestion(questions[0])
+    setQuestions(questions)
+  }, [isLoading])
+
   return (
     <div className='container'>
-      <Space className='card-home-page' align="center" direction="vertical">
+      <Space className='card-home-page' align='center' direction='vertical'>
         <Row justify={'center'}>
           <Col span={12}>
             <Title level={3} >Welcome to the Trivia Challenge!</Title>
@@ -26,17 +37,10 @@ const HomePage = () => {
           <Col span={12}>
             <Paragraph >Can you score 100%</Paragraph>
           </Col>
-          <Col span={12}>
-            {isLoading ? 'CARGANDO' : questions.map(question => (
-              <Paragraph >{question.difficulty}</Paragraph>
-            ))}
-
-            { score}
-          </Col>
         </Row>
         <Row justify={'center'}>
           <Col span={12}>
-            <Button >BEGIN!</Button>
+            <Button onClick={() => { navigate('/question') }} >BEGIN!</Button>
           </Col>
         </Row>
       </Space>
