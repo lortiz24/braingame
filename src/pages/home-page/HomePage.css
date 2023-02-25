@@ -6,11 +6,90 @@
   background-color: #4a2775;
 }
 .card-home-page {
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(245, 245, 245, 0.8);
   width: 60%;
   height: 80%;
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 20px;
+  text-align: center;
+  
+}
+
+.title .title-part {
+  font-weight: 1000;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  color: #ecdaf3;
+}
+.title .title-part.line-1 {
+  margin: 0;
+  font-size: 5vw;
+  text-shadow: #502e79 1px 1px, #55357e 2px 2px, #5b3c82 3px 3px,
+    #614286 4px 4px, #67498a 5px 5px, #6c508f 6px 6px, #725793 7px 7px,
+    #785e97 8px 8px, #7d659b 9px 9px, #836ca0 10px 10px, #8973a4 11px 11px,
+    #8e79a8 12px 12px, #9480ac 13px 13px, #9a87b1 14px 14px, #a08eb5 15px 15px,
+    #a595b9 16px 16px, #ab9cbe 17px 17px, #b1a3c2 18px 18px, #b6a9c6 19px 19px,
+    #bcb0ca 20px 20px, #c2b7cf 21px 21px, #c7bed3 22px 22px, #cdc5d7 23px 23px,
+    #d3ccdb 24px 24px, #d9d3e0 25px 25px, #dedae4 26px 26px, #e4e0e8 27px 27px,
+    #eae7ec 28px 28px, #efeef1 29px 29px, whitesmoke 30px 30px, #4a2775 0px 0px;
+}
+
+.button-container {
+  width: 200px;
+  height: 100%;
+  margin: 0 auto 0;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  background: #fff;
+}
+
+.pulse-button {
+  
+  display: block;
+  width: 100px;
+  height: 100px;
+  font-size: 1.3em;
+  font-weight: light;
+  font-family:"Nunito", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100px;
+  letter-spacing: -1px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background: #4a2775;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(147, 90, 212, 0.5);
+  -webkit-animation: pulse 1.5s infinite;
+}
+
+.pulse-button:hover {
+  -webkit-animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+  100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
 }

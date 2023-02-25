@@ -3,6 +3,7 @@ import { Button, Card, Col, Row, Space, Typography } from 'antd';
 import { BrainGameContex } from '../../context/BrainGameContex';
 import './QuestionPage.css'
 import QuestionCard from './QuestionCard';
+import { useNavigate } from 'react-router-dom';
 
 const { Title, Paragraph } = Typography;
 
@@ -10,18 +11,17 @@ const { Title, Paragraph } = Typography;
 const QuestionsPage = () => {
 
     const { setCurrentQuestion, setQuestions, correctAnswerSelected, incorrectAnswersSelected, questions, score, currentQuestion } = useContext(BrainGameContex);
+    const navigate = useNavigate()
 
-    const getNextQuestion = () => {
-        return setCurrentQuestion(currentQuestion + 1)
-    }
-    const getPreviusQuestion = () => {
-        return setCurrentQuestion(currentQuestion - 1)
-    }
+
+
     return (
         <div className='container'>
             <Card
-                title={<Title level={2} style={{ color: '#E384FF', fontSize: '38px' }}>{questions[currentQuestion].category}</Title>}
-                actions={[<Button shape="round" type='primary' size='large' onClick={() => { getNextQuestion() }} >GO!</Button>]}
+                title={
+                    <Title
+                        level={2} style={{ color: '#E384FF', fontSize: '38px' }}>{questions[currentQuestion].category}
+                    </Title>}
             >
 
                 <Row style={{ height: "100%" }} >

@@ -27,27 +27,27 @@ const HomePage = () => {
 
   return (
     <div className='container'>
-      <Card className='card-home-page' >
+      <Card className='card-home-page' bodyStyle={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Title className="title">
+          <Title className="title-part line-1">Trivia Challenge</Title>
+        </Title>
+
         <Row justify={'center'}>
           <Col span={12}>
-            <Title level={2} style={{ color: '#FFD700', fontSize: '28px' }}>Welcome to the Trivia Challenge!</Title>
+            <Title level={2} style={{ fontSize: '28px' }}>You will be presented with 10 True or False questions.</Title>
+          </Col>
+          <Col span={24}>
+            <Title level={2} style={{ fontSize: '28px' }}>Can you score 100%</Title>
           </Col>
         </Row>
+
         <Row justify={'center'}>
-          <Col span={12}>
-            <Title level={2} style={{ color: '#FFD700', fontSize: '28px' }}>You will be presented with 10 True or False questions.</Title>
+          <Col span={12} style={{ display: "flex", justifyContent: 'center', alignContent: "center" }}>
+            <span className='pulse-button' onClick={handleBeginClick}>Begin</span>
           </Col>
         </Row>
-        <Row justify={'center'}>
-          <Col span={12}>
-            <Title level={2} style={{ color: '#FFD700', fontSize: '28px' }}>Can you score 100%</Title>
-          </Col>
-        </Row>
-        <Row justify={'center'}>
-          <Col span={12}>
-            <Button onClick={handleBeginClick} >BEGIN!</Button>
-          </Col>
-        </Row>
+
+
       </Card>
     </div>
 

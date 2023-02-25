@@ -1,0 +1,14 @@
+.card-result-page {
+  background-color: rgb(245, 245, 245);
+  width: 30%;
+  height: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.button-result:hover {
+  color: #4A2775 !important;
+  border-color: #4A2775 !important;
+}
