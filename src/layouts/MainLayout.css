@@ -4,7 +4,6 @@ body{
 
 .main-layaout {
   height: 100vh;
-  background-color: aqua;
 }
 .main-layout-header {
   text-align: center;
@@ -13,4 +12,13 @@ body{
   padding-inline: 50;
   line-height: 64px;
   background-color: "#7dbcea";
+}
+
+
+.main-layout-content{
+  
+}
+
+.main-layout-footer{
+
 }

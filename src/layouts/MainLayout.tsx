@@ -1,6 +1,6 @@
 import React from 'react'
 import { HomePageProps } from '../interfaces/HomePageInterfaces'
-import { Layout } from 'antd'
+import { Card, Layout } from 'antd'
 import './MainLayout.css'
 
 
@@ -32,8 +32,8 @@ const MainLayout: React.FC<HomePageProps> = ({ children }) => {
         <>
             <div className='main-layaout'>
                 <Header className='main-layout-header' style={headerStyle}>Header</Header>
-                <Content style={contentStyle}>{children}</Content>
-                <Footer style={footerStyle}>Footer</Footer>
+                <Content className='main-layout-content' style={contentStyle}>{children}</Content>
+                <Footer className='main-layout-footer' style={footerStyle}>Footer</Footer>
             </div>
         </>
     )
