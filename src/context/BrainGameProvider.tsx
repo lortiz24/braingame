@@ -9,7 +9,7 @@ export const BrainGameProvider: React.FC<BrainGameProviderProps> = ({ children }
   const [questions, setQuestions] = useState([] as Questions[])
   const [correctAnswerSelected, setCorrectAnswerSelected] = useState([] as Questions[])
   const [incorrectAnswersSelected, setIncorrectAnswersSelected] = useState([] as Questions[])
-  const [currentQuestion, setCurrentQuestion] = useState({} as Questions)
+  const [currentQuestion, setCurrentQuestion] = useState(0)
   return (
     <BrainGameContex.Provider value={{
       score,

@@ -10,8 +10,8 @@ export interface BrainGameContexInterface {
     setCorrectAnswerSelected: React.Dispatch<React.SetStateAction<Questions[]>>;
     incorrectAnswersSelected: Questions[];
     setIncorrectAnswersSelected: React.Dispatch<React.SetStateAction<Questions[]>>;
-    currentQuestion: Questions;
-    setCurrentQuestion: React.Dispatch<React.SetStateAction<Questions>>
+    currentQuestion: number;
+    setCurrentQuestion: React.Dispatch<React.SetStateAction<number>>
 }
 
 export interface BrainGameProviderProps {

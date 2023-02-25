@@ -1,49 +1,54 @@
 import React, { useContext, useEffect } from 'react'
-import { Button, Col, Row, Space, Typography } from 'antd'
+import { Button, Card, Col, Row, Space, Typography } from 'antd'
 import { Link, useNavigate } from 'react-router-dom';
 import { BrainGameContex } from '../../context/BrainGameContex';
-import { useFetchQuestions } from '../../hooks/useFetchQuestions';
+import { useFetchQuestions } from '../../hooks/useFetchQuestion';
 import './HomePage.css'
 
 const { Title, Paragraph } = Typography;
 
 
 const HomePage = () => {
-  
+
   const navigate = useNavigate()
   const { setCurrentQuestion, setQuestions } = useContext(BrainGameContex);
-  const { isLoading, questions } = useFetchQuestions();
+  const { isLoading, questions, execute } = useFetchQuestions();
 
+
+  const handleBeginClick = () => {
+    execute()
+  }
 
   useEffect(() => {
-    setCurrentQuestion(questions[0])
+    setCurrentQuestion(0)
     setQuestions(questions)
-  }, [isLoading])
+    navigate('/question')
+  }, [questions])
 
   return (
     <div className='container'>
-      <Space className='card-home-page' align='center' direction='vertical'>
+      <Card className='card-home-page' >
         <Row justify={'center'}>
           <Col span={12}>
-            <Title level={3} >Welcome to the Trivia Challenge!</Title>
+            <Title level={2} style={{ color: '#FFD700', fontSize: '28px' }}>Welcome to the Trivia Challenge!</Title>
           </Col>
         </Row>
         <Row justify={'center'}>
           <Col span={12}>
-            <Paragraph >You will be presented with 10 True or False questions.</Paragraph>
+            <Title level={2} style={{ color: '#FFD700', fontSize: '28px' }}>You will be presented with 10 True or False questions.</Title>
           </Col>
         </Row>
         <Row justify={'center'}>
           <Col span={12}>
-            <Paragraph >Can you score 100%</Paragraph>
+            <Title level={2} style={{ color: '#FFD700', fontSize: '28px' }}>Can you score 100%</Title>
           </Col>
         </Row>
         <Row justify={'center'}>
           <Col span={12}>
-            <Button onClick={() => { navigate('/question') }} >BEGIN!</Button>
+            <Button onClick={handleBeginClick} >BEGIN!</Button>
           </Col>
         </Row>
-      </Space>
+      </Card>
     </div>
 
   )

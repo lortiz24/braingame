@@ -5,14 +5,12 @@ export const useFetchQuestions = () => {
     const [questions, setQuestions] = useState<Questions[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const fetchQuestions = async () => {
+    const execute = async () => {
         const data = await questionsModels.getQuestions();
         setQuestions(data);
         setIsLoading(false);
     };
-    useEffect(() => {
-        fetchQuestions();
-    }, []);
+   
 
-    return { questions, isLoading };
+    return { questions, isLoading, execute };
 };
